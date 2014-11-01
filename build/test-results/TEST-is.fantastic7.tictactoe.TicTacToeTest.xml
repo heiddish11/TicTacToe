@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.fantastic7.tictactoe.TicTacToeTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2014-11-01T02:42:17" hostname="AnnaKatrin" time="0.018">
+<testsuite name="is.fantastic7.tictactoe.TicTacToeTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2014-11-01T17:01:49" hostname="Guruns-MacBook-Pro-4.local" time="0.036">
   <properties/>
-  <testcase name="testSwitchPlayer" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testDisplayBoard" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.013"/>
+  <testcase name="testSwitchPlayer" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.003"/>
+  <testcase name="testDisplayBoard" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.019"/>
   <testcase name="testCheckIfBoardNotFull" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testCheckIfWinGameFinished" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testCheckIfWinGameFinished" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testSetStartPlayer" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckNoWin" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testRegisterMove" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testCheckIfWinAcrossUpBottom" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testRegisterMove" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.005"/>
   <testcase name="testCheckIfGameFinishedBoardFull" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testCheckIfWinAcross" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testTicTacToeConstructor" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testCheckIfWinAcrossBottomUp" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckIfWinCol" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckIfWinRow" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testNewBoard" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
