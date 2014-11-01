@@ -28,8 +28,7 @@ public class TicTacToe {
 			}
 
 			if((x > 2 || x < 0)) {
-				System.out.println("Illegal move, game shutting dowm");
-				return;
+				illegalMove(x, o);
 			}
 			else {
 				newGame.registerMove(x,o);
@@ -177,7 +176,17 @@ public class TicTacToe {
 	{
 		return this.checkIfWin() || this.checkIfBoardFull();
 	}
-
+	
+	public static void illegalMove(int x, int o)
+	{
+		Scanner in = new Scanner(System.in);
+		while(x > 2 || x < 0)
+		{
+			System.out.println("Illegal move, insert numbers between 0 and 2");
+                	x = in.nextInt();
+                	o = in.nextInt();
+		}
+	}
 }
 
 
