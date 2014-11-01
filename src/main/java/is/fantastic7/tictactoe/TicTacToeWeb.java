@@ -32,6 +32,17 @@ public class TicTacToeWeb implements SparkApplication
 			}
 		});
 
+		post(new Route("/")
+		{
+			@Override
+			public Object handle(Request request, Response response)
+			{
+				newGame.initializeBoard();
+				String board = newGame.displayBoard();
+				return board;
+			}
+		});
+
 		/*post(new Route("/fill")
 		{
 			@Override
