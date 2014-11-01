@@ -2,6 +2,32 @@
 
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: "jacoco"
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
+
+test {
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpFile = file("$buildDir/jacoco/classpathdumps")
+    }
+}
+
+jacoco {
+    applyTo run
+}
+
+task applicationCodeCoverageReport(type:JacocoReport){
+    executionData run
+    sourceSets sourceSets.main
+}
 
 repositories {
     // Use 'jcenter' for resolving your dependencies.
