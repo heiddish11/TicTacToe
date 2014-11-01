@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.fantastic7.tictactoe.TicTacToeTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2014-11-01T21:47:52" hostname="idea-PC" time="0.061">
+<testsuite name="is.fantastic7.tictactoe.TicTacToeTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2014-11-01T21:57:39" hostname="idea-PC" time="0.055">
   <properties/>
   <testcase name="testSwitchPlayer" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.006"/>
-  <testcase name="testDisplayBoard" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.051"/>
+  <testcase name="testDisplayBoard" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.046"/>
   <testcase name="testCheckIfBoardNotFull" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckIfWinGameFinished" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testSetStartPlayer" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckNoWin" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckIfWinAcrossUpBottom" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testRegisterMove" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testCheckIfGameFinishedBoardFull" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testCheckIfGameFinishedBoardFull" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testTicTacToeConstructor" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckIfWinAcrossBottomUp" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckIfWinCol" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testCheckIfWinRow" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testCheckIfWinRow" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testNewBoard" classname="is.fantastic7.tictactoe.TicTacToeTest" time="0.0"/>
   <system-out><![CDATA[-------------
 | - | - | - | 
