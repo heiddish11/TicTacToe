@@ -26,6 +26,7 @@ public class TicTacToeWeb implements SparkApplication
 			@Override
 			public Object handle(Request request, Response response)
 			{
+				newGame.initializeBoard();
 				String board = newGame.displayBoard();
 				return board;
 			}

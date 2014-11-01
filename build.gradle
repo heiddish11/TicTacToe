@@ -30,6 +30,8 @@ dependencies {
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
 
+mainClassName = "is.fantastic7.tictactoe.TicTacToeWeb"
+
 task selenium(type: Test, dependsOn: installApp) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
@@ -82,8 +84,6 @@ task createDocs {
         new File(docs, "readme.txt").write("Read me!")
     }
 }
-
-mainClassName = "is.fantastic7.tictactoe.TicTacToe"
 
 run {
     standardInput = System.in
