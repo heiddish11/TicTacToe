@@ -7,7 +7,7 @@ public class TicTacToe {
 		public static void main(String[] args) {
 		TicTacToe newGame = new TicTacToe();
 
-		System.out.println("Welcome to TicTacToe! \nPick the first number from 0 to 2, press enter and then pick the second number from 0 to 2:");
+		System.out.println("Welcome to TicTacToe! \nPick the first number from 1 to 3, press enter and then pick the second number from 1 to 3:");
 		Scanner in = new Scanner(System.in);
 		newGame.setStartPlayer();
 		newGame.initializeBoard();
@@ -19,26 +19,26 @@ public class TicTacToe {
 		int o;
 
 		do {
-			x = 0;
-			o = 0;
+			x = 1;
+			o = 1;
 
 			if(in.hasNextInt()) {
 				x = in.nextInt();
 				o = in.nextInt();
 			}
 
-			if((x > 2 || x < 0)) {
-				System.out.println("Illegal move, insert numbers between 0 and 2");
+			if((x > 3 || x < 1)) {
+				System.out.println("Illegal move, insert numbers between 1 and 3");
 				continue;
 			}
 			else {
 				// Check if space is already occupied
-				if (newGame.board[x][o] == 'x' || newGame.board[x][o] == 'o')
+				if (newGame.board[x-1][o-1] == 'x' || newGame.board[x-1][o-1] == 'o')
                 {
-                	System.out.println("space is full, please insert another empty position");
+                	System.out.println("space is full, please insert to a empty position");
                 	continue;
                 }
-				newGame.registerMove(x,o);
+				newGame.registerMove(x-1,o-1);
 				newGame.switchPlayer();
 				newGame.displayBoard();
 				System.out.println("Make your next move");

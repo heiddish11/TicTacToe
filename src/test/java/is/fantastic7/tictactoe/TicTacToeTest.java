@@ -117,7 +117,7 @@ public class TicTacToeTest
 	}
 
 	@Test
-	public void testCheckIfWinAcross() {
+	public void testCheckIfWinAcrossUpBottom() {
 		t.initializeBoard();
 		t.newBoard();
 		t.setStartPlayer();
@@ -129,8 +129,22 @@ public class TicTacToeTest
 	}
 
 	@Test
+	public void testCheckIfWinAcrossBottomUp() {
+		t.initializeBoard();
+		t.newBoard();
+		t.setStartPlayer();
+
+		t.registerMove(0,2);
+		t.registerMove(1,1);
+		t.registerMove(2,0);
+		
+		boolean actual = t.checkIfWin();
+		assertTrue(actual);
+	}
+
+	@Test
 	public void testCheckIfWinGameFinished() {
-		this.testCheckIfWinAcross();
+		this.testCheckIfWinAcrossUpBottom();
 		boolean actual = t.gameFinished();
 		assertTrue(actual);
 	}
