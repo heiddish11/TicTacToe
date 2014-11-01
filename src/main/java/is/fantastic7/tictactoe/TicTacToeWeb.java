@@ -21,7 +21,7 @@ public class TicTacToeWeb implements SparkApplication
 	{
 		final TicTacToe newGame = new TicTacToe();
 
-		get(new Route("/")
+		get(new Route("/board")
 		{
 			@Override
 			public Object handle(Request request, Response response)
@@ -32,7 +32,7 @@ public class TicTacToeWeb implements SparkApplication
 			}
 		});
 
-		get(new Route("/")
+		post(new Route("/fill")
 		{
 			@Override
 			public Object handle(Request request, Response response)
@@ -43,16 +43,16 @@ public class TicTacToeWeb implements SparkApplication
 			}
 		});
 
-		get(new Route("/")
+		/*get(new Route("/move")
 		{
 			@Override
 			public Object handle(Request request, Response response)
 			{
 				newGame.regiserMove();
-				String addMove = newGame.registerMove();
+				String addMove = newGame.displayBoard();
 				return addMove;
 			}
-		});
+		});*/
 
 		/*post(new Route("/player")
 		{
