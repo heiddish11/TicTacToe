@@ -11,7 +11,7 @@
         <div class="container">
             <h1>Shall we play a game of TicTacToe?</h1>
             <p>Input row number and column</p>
-            <form method="post" action="/random" class="form-inline" role="form">
+            <form method="post" action="/id" class="form-inline" role="form">
                 Row: <input type="text" name="row">
                 Column: <input type="text" name="column">
                 <input type="submit" value="Submit">
@@ -23,27 +23,5 @@
             <hr>
             <p>Or did you want a specific joke? <a href="specific.html">Get them here!</a></p>
         </div>
-
-        <!-- Load jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-        <!-- Use ajax to submit form, retrive joke and display on page -->
-        <script>
-        $(document).ready(function() {
-            var form = $('form');
-            form.submit(function( event ) {
-                $.ajax({
-                    type: form.attr('method'),
-                    url: form.attr('action'),
-                    data: null
-                }).done(function(board) {
-                    $('#results').html(board).attr('class', 'alert alert-success');
-                }).fail(function() {
-                    $('#results').html('Error, no joke found...').attr('class', 'alert alert-danger');
-                });
-                event.preventDefault();
-            });
-        });
-        </script>
     </body>
 </html>

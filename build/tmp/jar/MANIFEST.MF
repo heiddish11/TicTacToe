@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: is.fantastic7.tictactoe.TicTacToe
-
