@@ -11,4 +11,10 @@ index.html                |
 --------------------------|
 ![random](img/random.png) |
 
-##
+## Getting Started
+
+## The Team - Fantastic 7
+The team Fantastic7 consists of seven women in Computer Science at Reykjavík Univeristy Iceland.
+Fantastic 7               |
+--------------------------|
+(img/theTeam.png) 		  |
