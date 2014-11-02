@@ -23,18 +23,18 @@ public class TicTacToeWeb implements SparkApplication
 	{
 		final TicTacToe newGame = new TicTacToe();
 
-		get(new Route("/random")
+		get(new Route("/board")
 		{
 			@Override
 			public Object handle(Request request, Response response)
 			{
 				newGame.initializeBoard();
 				String board = newGame.displayBoard();
-				return "hahahaha";
+				return board;
 			}
 		});
 
-		post(new Route("/random")
+		post(new Route("/click")
 		{
 			@Override
 			public Object handle(Request request, Response response)
