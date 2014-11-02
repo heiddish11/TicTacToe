@@ -7,17 +7,14 @@
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
         <link rel="icon" type="image/png" href="favicon.png">
         <!-- Load jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     </head>
     <body>
            <!-- Use ajax to submit form, retrive joke and display on page -->
         <script>
         $(document).ready(function() {
-            var bla = 10;
-            $("#hhhh").click(function(){
+            $("#click").click(function(){
                 console.log("joli");
-                bla +=1;
             });
             $("#tictactoe tr td").click(function(){
                 console.log("joli");
@@ -41,7 +38,7 @@
         <div class="container">
             <h1>Shall we play a game of TicTacToe?</h1>
             <p>Input row number and column</p>
-            <div id="hhhh" >
+            <div id="click" >
               <div id="X" class="">Player X</div>
               <div id="O" class="">Player O</div>
               <input type="button" class="button" value="New Game">
@@ -63,13 +60,6 @@
                 <td id="8"></td>
               </tr>
             </table>
-            </div>
-            <form method="post" action="/random" class="form-inline" role="form">
-                Row: <input type="text" name="row">
-                Column: <input type="text" name="column">
-                <input type="submit" value="Submit">
-                <!-- <button type="submit">Random</button> -->
-            </form>
         </div>
        <!-- <div id="hhhh">
             <body onload="init();">  
