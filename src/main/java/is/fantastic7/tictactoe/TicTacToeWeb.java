@@ -34,11 +34,12 @@ public class TicTacToeWeb implements SparkApplication
 			}
 		});
 
-		post(new Route("/random")
+		post(new Route("/click")
 		{
 			@Override
 			public Object handle(Request request, Response response)
 			{
+				//request.params("id eða name sem þarf að vera í forminu")
 				System.out.println(request.toString());
 				newGame.initializeBoard();
 				
