@@ -4,10 +4,12 @@ import spark.*;
 import static spark.Spark.*;
 import spark.servlet.SparkApplication;
 
+
 public class TicTacToeWeb implements SparkApplication 
 {
 	public static void main(String[] args)
 	{
+		staticFileLocation("/public");
 		SparkApplication tictactoe = new TicTacToeWeb();
 		String port = System.getenv("PORT");
 		if (port != null)
@@ -21,25 +23,27 @@ public class TicTacToeWeb implements SparkApplication
 	{
 		final TicTacToe newGame = new TicTacToe();
 
-		get(new Route("/")
+		get(new Route("/random")
 		{
 			@Override
 			public Object handle(Request request, Response response)
 			{
 				newGame.initializeBoard();
 				String board = newGame.displayBoard();
-				return board;
+				return "hahahaha";
 			}
 		});
 
-		post(new Route("/")
+		post(new Route("/random")
 		{
 			@Override
 			public Object handle(Request request, Response response)
 			{
+				System.out.println(request.toString());
 				newGame.initializeBoard();
+				
 				String board = newGame.displayBoard();
-				return board;
+				return request.toString();
 			}
 		});
 

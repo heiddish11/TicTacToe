@@ -6,22 +6,97 @@
         <!-- load bootstrap for nicer ui -->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
         <link rel="icon" type="image/png" href="favicon.png">
+        <!-- Load jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     </head>
     <body>
+           <!-- Use ajax to submit form, retrive joke and display on page -->
+        <script>
+        $(document).ready(function() {
+            var bla = 10;
+            $("#hhhh").click(function(){
+                console.log("joli");
+                bla +=1;
+            });
+            $("#tictactoe tr td").click(function(){
+                console.log("joli");
+            });
+            var form = $('form');
+            form.submit(function( event ) {
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: bla//
+                }).done(function(board) {
+
+                    $('#results').html(board).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#results').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+        });
+         </script>
         <div class="container">
             <h1>Shall we play a game of TicTacToe?</h1>
             <p>Input row number and column</p>
+            <div id="hhhh" >
+              <div id="X" class="">Player X</div>
+              <div id="O" class="">Player O</div>
+              <input type="button" class="button" value="New Game">
+            </div>
+            <table>
+              <tr>
+                <td id="0"></td>
+                <td id="1"></td>
+                <td id="2"></td>
+              </tr>
+              <tr>
+                <td id="3"></td>
+                <td id="4"></td>
+                <td id="5"></td>
+              </tr>
+              <tr>
+                <td id="6"></td>
+                <td id="7"></td>
+                <td id="8"></td>
+              </tr>
+            </table>
+            </div>
             <form method="post" action="/random" class="form-inline" role="form">
                 Row: <input type="text" name="row">
                 Column: <input type="text" name="column">
                 <input type="submit" value="Submit">
                 <!-- <button type="submit">Random</button> -->
             </form>
-            <hr>
-            <div id="results" class="alert alert-info">How many Chuck Norris require to screw a light
-                bulb? None, he will screw it all.</div>
-            <hr>
-            <p>Or did you want a specific joke? <a href="specific.html">Get them here!</a></p>
         </div>
+       <!-- <div id="hhhh">
+            <body onload="init();">  
+            <div id="players">
+              <div id="X" class="">Player X</div>
+              <div id="O" class="">Player O</div>
+              <input type="button" class="button" value="New Game">
+            </div>
+            <table>
+              <tr>
+                <td id="0"></td>
+                <td id="1"></td>
+                <td id="2"></td>
+              </tr>
+              <tr>
+                <td id="3"></td>
+                <td id="4"></td>
+                <td id="5"></td>
+              </tr>
+              <tr>
+                <td id="6"></td>
+                <td id="7"></td>
+                <td id="8"></td>
+              </tr>
+            </table>
+            </body>
+        </div>
+    -->
     </body>
 </html>
